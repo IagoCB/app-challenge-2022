@@ -1,14 +1,25 @@
 import client from './config';
 
-const path = '/presents';
+const pathPlans = '/plans';
+const pathInstallers = '/plans';
 
 const Client = {    
-    async getGifts(data) {
-        console.log(data)
+    async getPlans(data) {
         try {
-            const response = await client.post(
-                path,
-                data,            
+            const response = await client.get(
+                pathPlans,  
+                data                   
+            );
+            return response;
+        } catch (e) {
+            return e;
+        }
+    },
+    async getInstallers(data) {
+        try {
+            const response = await client.get(
+                pathInstallers,  
+                data                   
             );
             return response;
         } catch (e) {
