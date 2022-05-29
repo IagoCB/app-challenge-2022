@@ -1,7 +1,7 @@
 import client from './config';
 
 const pathPlans = '/plans';
-const pathInstallers = '/plans';
+const pathInstallers = '/installers';
 
 const Client = {    
     async getPlans(data) {
